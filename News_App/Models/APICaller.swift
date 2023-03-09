@@ -29,7 +29,6 @@ final class APICaller {
                 do {
                     let result = try JSONDecoder().decode(APIResponse.self, from: data)
                     print("successful fetch")
-                    print(result.articles)
                     completion(.success(result.articles))
                 }
                 catch {
